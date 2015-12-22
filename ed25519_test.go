@@ -33,6 +33,19 @@ func TestEd25519(t *testing.T) {
 		t.Fatalf("did not verify")
 	}
 
+	b[0] ^= 0x40
+	ok = privateKey.Verify(b, sig)
+	if ok {
+		t.Fatalf("verified when invalid")
+	}
+
+	b[0] ^= 0x40
+	sig[0] ^= 0x40
+	ok = privateKey.Verify(b, sig)
+	if ok {
+		t.Fatalf("verified when invalid")
+	}
+
 	pub, ok := privateKey.Public().(*PublicKey)
 	if !ok || pub != &privateKey.PublicKey {
 		t.Fatalf("...")
