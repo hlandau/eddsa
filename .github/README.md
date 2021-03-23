@@ -1,24 +1,9 @@
 eddsa
 =====
 
-[![godocs.io](https://godocs.io/github.com/hlandau/eddsa?status.svg)](https://godocs.io/github.com/hlandau/eddsa) [![Build status](https://github.com/hlandau/eddsa/actions/workflows/go.yml/badge.svg)](#) [![No modules](https://www.devever.net/~hl/f/no-modules2.svg) 100% modules-free.](https://www.devever.net/~hl/gomod)
+[![godocs.io](https://godocs.io/github.com/hlandau/eddsa?status.svg)](https://godocs.io/github.com/hlandau/eddsa) [![No modules](https://www.devever.net/~hl/f/no-modules2.svg) 100% modules-free.](https://www.devever.net/~hl/gomod)
 
-`crypto/rsa` and `crypto/ecdsa` provide `PublicKey` and `PrivateKey` structures
-which can be used to unambiguously represent RSA and ECDSA keys.
-
-There is [an implementation of Ed25519](https://github.com/agl/ed25519) for Go,
-but it provides basic functions which take pointers to fixed-length arrays. It
-is undesirable for code which does type-switches on `interface{}` values to
-have to assume that a value of type `*[32]byte` is an Ed25519 public key and a
-value of type `*[64]byte` is an Ed25519 private key.
-
-This package wraps [agl/ed25519](https://github.com/agl/ed25519) with a saner
-interface much more like `crypto/rsa`, `crypto/ecdsa` and `crypto/elliptic`,
-while still allowing you to get the public and private keys as pointers to
-fixed-length arrays if you need to.
-
-It is designed to allow other curves to be implemented in future, such as Curve448.
-In this regard, the design of this package closely follows `crypto/elliptic`.
+This package should no longer be used. Use `crypto/ed25519`.
 
 Licence
 -------
