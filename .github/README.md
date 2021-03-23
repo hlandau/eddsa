@@ -1,7 +1,7 @@
 eddsa
 =====
 
-[![GoDoc](https://godoc.org/github.com/hlandau/eddsa?status.svg)](https://godoc.org/github.com/hlandau/eddsa) [![Build Status](https://travis-ci.org/hlandau/eddsa.svg?branch=master)](https://travis-ci.org/hlandau/eddsa)
+[![godocs.io](https://godocs.io/github.com/hlandau/eddsa?status.svg)](https://godocs.io/github.com/hlandau/eddsa) [![Build status](https://github.com/hlandau/eddsa/actions/workflows/go.yml/badge.svg)](#) [![No modules](https://www.devever.net/~hl/f/no-modules2.svg) 100% modules-free.](https://www.devever.net/~hl/gomod)
 
 `crypto/rsa` and `crypto/ecdsa` provide `PublicKey` and `PrivateKey` structures
 which can be used to unambiguously represent RSA and ECDSA keys.
